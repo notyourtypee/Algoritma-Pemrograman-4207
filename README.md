@@ -1,1 +1,1 @@
-# Algoritma-Pemrograman-Tugas-1 by-Muhammad Atha Nassa
+# Algoritma-Pemrograman-by-Muhammad Atha Nassa
