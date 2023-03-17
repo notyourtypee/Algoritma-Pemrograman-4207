@@ -11,88 +11,89 @@ Tanggal  : 10 Maret 2023
 
 using namespace std;
 
-
-int penjumlahan(int a, int b) {
-    return a+b;
+//fungsi tambah
+void tambah (int x,int y){
+    cout<< x+y;
+}
+//prosedur tambah
+int tambah1 (int x,int y){
+    return x+y;
 }
 
-
-int pengurangan(int a, int b) {
-    return a-b;
+//fungsi kurang
+void kurang (int x,int y){
+    cout<< x-y;
+}
+//prosedur kurang
+int kurang1 (int x,int y){
+    return x-y;
 }
 
-
-int perkalian(int a,int b) {
-    return a*b;
+//fungsi kali
+void kali (int x,int y){
+    cout << x*y;
+}
+//prosedur kali
+int kali1 (int x,int y){
+    return x*y;
 }
 
+//fungsi jmlh array
+void jmlarray( ){
+    int h;
+    int a;
+    cout << "------------------------------" << endl;
+    cout << " jumlah array dan rata rata " << endl;
+    cout << "------------------------------" << endl;
+    cout << "masukan jumlah nilai : ";cin >> a;
 
-int total(int myArray[], int jumlah){
-    int hasil;
-    for(int i=0; i < jumlah; i++){
-        hasil += myArray[i];
+    int n [a];
+    for( int i = 0; i < a ; i++){
+       cout << "masukan nilai ke"<<i+1<<" : " ; cin >> n[i];
     }
-    return hasil;
-}
-
-
-float rata(int myArray[],int jumlah){
-    float hasil;
-    for(int i=0; i < jumlah; i++){
-        hasil += myArray[i];
+    float total = 0;
+    for(int i = 0; i < a; i++){
+        total = total+n[i];
     }
-    return hasil /= jumlah;
+    float r = total / a ;
+    cout << "hasil jumlah     : " << total << endl;
+    cout << "hasil rata rata  : "<< r;
+    cout <<endl;
 }
-
-
-void arr(int myArray[],int jumlah){
-    cout << "[";
-    for (int i=0; i < jumlah; i++){
-        cout << myArray[i];
-        if (i < jumlah-1){
-            cout << ",";
-        } else {
-            cout << "";
-        }
-    }
-    cout << "]"<<endl;
-}
-
 
 int main()
 {
+    int a,b;
+    //output untuk fungsi & prosedur pertambahan
+    cout << "masukan nilai 1: " ;cin>>a;
+    cout << "masukan nilai 2: " ;cin>>b;
+    cout <<  "        hasil        "<<endl;
+    cout <<"hasil (fungsi tambah ) : ";
 
-    //Kamus
-    int a = 10,b =7,jumlah;
+    tambah(a,b);
+    cout << endl;
+    cout << "hasil (prosedur tambah) : "<<tambah1(a,b);
+    cout << endl;
+    cout << "------------------------------"<<endl;
 
-    //Algoritma
-    cout <<  "===============\t Penjumlahan 2 Bilangan ===============" << endl;
-    cout << a << " + " << b << " = " << penjumlahan(a,b) << endl;
+    //output untuk fungsi & prosedur pengurangan
+    cout<<"hasil (fungsi kurang) : ";
 
+    kurang(a,b);
+    cout<<endl;
+    cout<<"hasil (prosedur kurang) : "<<kurang1(a,b);
+    cout<<endl;
+    cout<<"------------------------------"<<endl;
 
-    cout <<  "===============\t Pengurangan 2 Bilangan ===============" << endl;
-    cout << a << " - " << b << " = " << pengurangan(a,b) << endl;
+    //output untuk fungsi & prosedur perkalian
+    cout<<"hasil (fungsi kali) : ";
 
+    kali(a,b);
+    cout<<endl;
+    cout<<"hasil (prosedur kali) : "<<kali1(a,b);
+    cout<<endl;
 
-    cout <<  "===============\t Perkalian 2 Bilangan \t===============" << endl;
-    cout << a << " * " << b << " = " << perkalian(a,b) << endl;
+    jmlarray();
 
-
-    cout << "===============\t Total Element Array \t===============" << endl;
-    cout << "Masukkan jumlah element Array yang akan diinput : ";
-    cin >> jumlah;                                                              //jumlah bilangan yang akan diinput
-    int myArray[jumlah];
-    for (int j=0;j<jumlah;j++){
-        cout << "Masukkan bilangan indeks ke- [" << j << "] = ";
-        cin >> myArray[j];
-    }
-    arr(myArray,jumlah);
-    cout << "total \t\t: " << total(myArray,jumlah) << endl;
-
-
-    cout <<  "===============\t Rata - Rata Element Array ===============" << endl;
-    cout << "Rata - Rata \t: "<< rata(myArray,jumlah) ;
     return 0;
 }
-
-
